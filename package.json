@@ -1,0 +1,22 @@
+{
+  "name": "teste2",
+  "version": "1.0.0",
+  "description": "Teste para banco de dados",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "Geovani Bueno",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.11",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
