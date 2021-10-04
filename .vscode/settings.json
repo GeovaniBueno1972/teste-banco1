@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "max": 10
+            },
+            "previewLimit": 50,
+            "server": "ec2-44-194-201-94.compute-1.amazonaws.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Teste2",
+            "database": "dd3gkc07tfoolb",
+            "username": "mocutjaxmpefri",
+            "password": "7a00ac34c66a83f0ed6490c376e91bb4fc5d12c0044d5512e3d12ac6f3f0fa4e"
+        }
+    ]
+}
