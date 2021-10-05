@@ -11,18 +11,17 @@ const pool = new Pool({
 
 
 module.exports = app =>{
-    express()
-        .get('/usuarios',  async (req, res) => {
+    const get = async (req, res) => {
         try {
-          const client = await pool.connect();
-          const result = await client.query('SELECT * FROM usuarios');
-          const results = { 'results': (result) ? result.rows : null};
-          client.release();
-        } catch (err) {
-          console.error(err);
-          res.send("Error " + err);
+            const client = await pool.connect();
+            const result = await client.query('SELECT * FROM usuarios');
+            const resultado = {'Resultado': (result) ? result.rows : null};
+            res.json(resultado)
+        } catch (error) {
+            console.error(err);
+            res.send("Error " + err);
         }
-      })
+    }
     
 
     const save = async (req, res) => {
@@ -35,5 +34,5 @@ module.exports = app =>{
             .catch(err => res.status(500).send(err))
     }
 
-    return { save }
+    return { save, get }
 }
