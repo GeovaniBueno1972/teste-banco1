@@ -11,7 +11,7 @@ module.exports = app =>{
         
         app.db('usuarios')
             .insert(user)
-            .then(_ => res.status(204).send({message: 'Cadastrado com sucesso'}))
+            .then(_ => res.status(204).send())
             .catch(err => res.status(500).send(err))
     }
 
